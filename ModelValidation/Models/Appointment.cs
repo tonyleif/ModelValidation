@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using ModelValidation.Infrastructure;
+using System.Web.Mvc;
 
 namespace ModelValidation.Models
 {
@@ -15,6 +16,7 @@ namespace ModelValidation.Models
         [DataType(DataType.Date)]
         //[Required(ErrorMessage = "Please enter a date")]
         //[FutureDate(ErrorMessage = "Please enter a date in the future")]
+        [Remote("ValidateDate", "Home")]
         public DateTime Date { get; set; }
 
         //[Range(typeof(bool), "true", "true", ErrorMessage = "You must accept the terms")]
