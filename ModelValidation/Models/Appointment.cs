@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using ModelValidation.Infrastructure;
 
 namespace ModelValidation.Models
 {
+    [NoJoeOnMondays]
     public class Appointment
     {
         [Required]
